@@ -1,27 +1,44 @@
-# Portfólio React Hooks
+# Biblioteca Online API
 
-Portfólio profissional desenvolvido para o desafio de React da DNC.
-
-## Template
-
-**Template 03** - Design minimalista com tema claro.
+Sistema de gerenciamento de livros desenvolvido para o desafio de Node.js e React da DNC.
 
 ## Sobre
 
-Portfólio pessoal com seções de apresentação, projetos e blog. Desenvolvido com React Hooks para animações e interatividade.
+Aplicação fullstack para gerenciamento de livros de uma biblioteca online. Possui uma API REST em Node.js/Express integrada com um front-end em React/Vite. Permite cadastrar, editar, visualizar e deletar livros.
 
 ## Tecnologias
 
+**Backend:**
+- Node.js
+- Express
+- CORS
+
+**Frontend:**
 - React 18
 - Vite
-- CSS3
-- Google Fonts (Heebo)
+- React Router DOM
+- Axios
+- Sass
 
 ## Como usar
 
+Clone o repositório e instale as dependências:
+
 ```bash
-git clone https://github.com/lucas-gonzales/RID99751_Desafio_Desenvolva_um_portfolio_com_React_hooks.git
-cd RID99751_Desafio_Desenvolva_um_portfolio_com_React_hooks
+git clone https://github.com/lucas-gonzales/RID99751_Desafio-Desenvolva-uma-API-e-integre-ao-front-end-de-uma-aplica-o.git
+cd RID99751_Desafio-Desenvolva-uma-API-e-integre-ao-front-end-de-uma-aplica-o
+```
+
+**Backend (Terminal 1):**
+```bash
+cd backend
+npm install
+npm start
+```
+
+**Frontend (Terminal 2):**
+```bash
+cd frontend
 npm install
 npm run dev
 ```
@@ -31,32 +48,53 @@ Acesse http://localhost:5173 no navegador.
 ## Estrutura
 
 ```
-src/
-├── components/
-│   ├── Header.jsx
-│   ├── Hero.jsx
-│   ├── Blog.jsx
-│   ├── Projects.jsx
-│   └── Footer.jsx
-├── App.jsx
-├── App.css
-├── index.css
-└── main.jsx
+├── backend/
+│   └── src/
+│       ├── controllers/
+│       │   └── livrosController.js
+│       ├── models/
+│       │   └── livrosModel.js
+│       ├── routes/
+│       │   └── livrosRoutes.js
+│       └── server.js
+│
+└── frontend/
+    └── src/
+        ├── api/
+        │   └── LivrosService.js
+        ├── components/
+        │   └── Header/
+        └── views/
+            ├── Home/
+            ├── Livros/
+            ├── LivrosCadastro/
+            └── LivrosEdicao/
 ```
 
-## React Hooks
+## API Endpoints
 
-**useState** - Gerenciamento de estado em Header, Hero, Projects e Blog
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| GET | /livros | Lista todos os livros |
+| GET | /livros/:id | Busca livro por ID |
+| POST | /livros | Cadastra novo livro |
+| PUT | /livros/:id | Atualiza livro |
+| DELETE | /livros/:id | Remove livro |
 
-**useEffect** - Animações de scroll e entrada de elementos
+## Layout
+
+O design foi baseado no protótipo do Figma.
+
+- Listagem de livros em cards
+- Formulário de cadastro centralizado
+- Formulário de edição com dados pré-carregados
 
 ## Funcionalidades
 
-- Navegação com scroll spy
-- Animações de entrada
-- Seção de projetos com hover effects
-- Cards de blog estilizados
-- Links para redes sociais
+- Listar todos os livros cadastrados
+- Cadastrar livros (ID, Título, Páginas, ISBN, Editora)
+- Editar informações dos livros
+- Deletar livros do sistema
 
 ## Autor
 
