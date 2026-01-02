@@ -1,62 +1,62 @@
-# Board de Tarefas
+# Portfólio React Hooks
 
-Gerenciador de tarefas desenvolvido para o desafio de JavaScript da DNC.
+Portfólio profissional desenvolvido para o desafio de React da DNC.
+
+## Template
+
+**Template 03** - Design minimalista com tema claro.
 
 ## Sobre
 
-Aplicação web para gerenciamento de tarefas com funcionalidades de adicionar, concluir e listar tarefas. Os dados são persistidos no localStorage do navegador.
+Portfólio pessoal com seções de apresentação, projetos e blog. Desenvolvido com React Hooks para animações e interatividade.
 
 ## Tecnologias
 
 - React 18
-- TypeScript
 - Vite
 - CSS3
-- Google Fonts (Rubik, Inter)
+- Google Fonts (Heebo)
 
 ## Como usar
 
-Clone o repositório e instale as dependências:
-
 ```bash
-git clone https://github.com/lucas-gonzales/RID99751_Desafio_Construa_um_Gerenciador_de_Tarefas.git
-cd RID99751_Desafio_Construa_um_Gerenciador_de_Tarefas
+git clone https://github.com/lucas-gonzales/RID99751_Desafio_Desenvolva_um_portfolio_com_React_hooks.git
+cd RID99751_Desafio_Desenvolva_um_portfolio_com_React_hooks
 npm install
 npm run dev
 ```
 
-Acesse `http://localhost:5173` no navegador.
+Acesse http://localhost:5173 no navegador.
 
 ## Estrutura
 
 ```
 src/
 ├── components/
-│   ├── TaskCard.tsx
-│   └── TaskForm.tsx
-├── hooks/
-│   └── useTasks.ts
-├── types/
-│   └── Task.ts
-├── App.tsx
+│   ├── Header.jsx
+│   ├── Hero.jsx
+│   ├── Blog.jsx
+│   ├── Projects.jsx
+│   └── Footer.jsx
+├── App.jsx
 ├── App.css
-└── main.tsx
+├── index.css
+└── main.jsx
 ```
 
-## Layout
+## React Hooks
 
-O design foi baseado no protótipo do [Figma](https://www.figma.com/design/xryNIAyzDACBmbpmH4orjF/Desafio---Board-de-Tarefas-DNC).
+**useState** - Gerenciamento de estado em Header, Hero, Projects e Blog
 
-**Desktop:** Inputs lado a lado, cards horizontais com botão à direita
-
-**Mobile:** Layout em coluna única, inputs e botões empilhados
+**useEffect** - Animações de scroll e entrada de elementos
 
 ## Funcionalidades
 
-- Adicionar tarefas com nome e etiqueta
-- Marcar tarefas como concluídas
-- Contador de tarefas concluídas
-- Persistência no localStorage
+- Navegação com scroll spy
+- Animações de entrada
+- Seção de projetos com hover effects
+- Cards de blog estilizados
+- Links para redes sociais
 
 ## Autor
 

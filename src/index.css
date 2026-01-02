@@ -4,19 +4,108 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f5f9ff;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #EDF7FA;
+  --accent-coral: #FF6464;
+  --accent-coral-hover: #e55555;
+  --text-primary: #21243D;
+  --text-secondary: #21243D;
+  --text-muted: #21243D;
+  --border-color: #E0E0E0;
 }
 
-#root {
-  width: 100%;
-  display: flex;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Heebo', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 61px;
+}
+
+/* Section Styles */
+section {
+  padding: 50px 0;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+}
+
+/* Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent-coral);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-coral-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
 }

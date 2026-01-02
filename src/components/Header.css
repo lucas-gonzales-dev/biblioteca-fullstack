@@ -1,0 +1,42 @@
+.header {
+  padding: 26px 0;
+  background: var(--bg-primary);
+}
+
+.header .container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-coral);
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    justify-content: center;
+  }
+
+  .nav {
+    gap: 24px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+}
