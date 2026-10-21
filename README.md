@@ -25,8 +25,8 @@ Aplicação fullstack para gerenciamento de livros de uma biblioteca online. Pos
 Clone o repositório e instale as dependências:
 
 ```bash
-git clone https://github.com/lucas-gonzales/RID99751_Desafio-Desenvolva-uma-API-e-integre-ao-front-end-de-uma-aplica-o.git
-cd RID99751_Desafio-Desenvolva-uma-API-e-integre-ao-front-end-de-uma-aplica-o
+git clone https://github.com/lucas-gonzales-dev/biblioteca-fullstack.git
+cd biblioteca-fullstack
 ```
 
 **Backend (Terminal 1):**
